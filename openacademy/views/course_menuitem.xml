@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+        <menuitem name="Academy"
+            id="menu_academy_root"
+            web_icon="documents,static/description/icon.png"
+            sequence="1"
+            action="academy_main_action"
+            />   
+        <!-- menu categories -->
+        <menuitem name="Courses" id="menu_courses_top" parent="menu_academy_root"/>
+        <menuitem name="Sessions" id="menu_sessions_top" parent="menu_academy_root"/>
+        <!--actions -->
+        <menuitem name="All" id="menu_courses_template" parent="menu_courses_top"
+                  action="courses_detail_action"/>
+        <menuitem name="All" id="menu_sessions_template" parent="menu_sessions_top"
+                  action="courses_detail_action"/>
+
+        <menuitem name="Add" id="menu_courses_template" parent="menu_courses_top"
+                  action="courses_add_action"/>
+        <menuitem name="Add" id="menu_sessions_template" parent="menu_sessions_top"
+                  action="courses_add_action"/>
+
+    </data>
+</odoo>
